@@ -1,0 +1,48 @@
+.strands-input-container {
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+  align-items: flex-start;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+.left-col { flex: 1; max-width: 520px; }
+.right-col { flex: 1; display: flex; flex-direction: column; align-items: center; }
+
+.form-row { margin-bottom: 12px; display:flex; flex-direction:column; gap:6px; }
+.words-row { display:flex; justify-content:space-between; align-items:center; }
+.text-input { padding:8px; font-size:14px; width:100%; box-sizing:border-box; }
+.text-input-row { display:flex; gap:8px; margin-bottom:8px; }
+.delete-button { background:#e74c3c; color:white; border:none; padding:6px 8px; cursor:pointer; }
+.btn { padding:8px 12px; border:1px solid #ccc; background:#f4f4f4; cursor:pointer; border-radius:4px; }
+.btn.primary { background:#28a745; color:white; border-color:#28a745; }
+.btn.secondary { background:#6c757d; color:white; border-color:#6c757d; }
+
+.validation-row { margin-top:8px; color:#c0392b; font-size:14px; }
+.form-actions { margin-top:12px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+
+.theme-heading { margin:0 0 8px 0; cursor:text; }
+.meta-row { margin-bottom:12px; color:#444; }
+
+.grid-preview { margin: 8px 0; }
+.preview-table { border-collapse: collapse; }
+.preview-table td { width:36px; height:36px; border:1px solid #ddd; text-align:center; vertical-align:middle; font-weight:600; }
+.cell-input { width:100%; height:100%; border:none; text-align:center; font-weight:700; font-size:16px; background:transparent; }
+.cell-display { display:inline-block; width:100%; height:100%; line-height:36px; }
+
+.full-indicator { margin-top:8px; color:#c0392b; }
+.full-indicator.full { color: #2ecc71; }
+
+.manual-buttons { margin-top:10px; gap:8px; }
+
+/* Highlight found words */
+.highlight-spangram { background: #ffecb3; }
+.highlight-word-3 { background: #d0f0fd; }
+.highlight-word-4 { background: #c8e6c9; }
+.highlight-word-5 { background: #f8bbd0; }
+.highlight-word-6 { background: #e1bee7; }
+.highlight-word-7 { background: #ffe0b2; }
+.highlight-word-8 { background: #dcedc8; }
+.highlight-word-9 { background: #f0f4c3; }
+
+.present-indicator.yes { color: #2ecc71; font-weight:700; }
+.present-indicator.no { color: #e74c3c; font-weight:700; }

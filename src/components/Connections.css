@@ -1,0 +1,178 @@
+
+body{
+  background-color: white;
+  color: black
+}
+.connections{
+  background-color: white;
+  align-content: center;
+  align-items: center;
+  justify-content: center; /* Horizontal alignment */
+  color:black;
+
+}
+.solved-group p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  margin: 20px 7.5%;
+  max-width:85%;
+}
+
+.grid-item {
+  background-color: #f0efe6;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  
+  cursor: pointer;
+  transition: all 0.3s;
+
+  width: 80px;
+  align-items: center;
+
+  align-content: center;
+  height: 80px;
+
+}
+
+.grid-item-text{
+ font-size: 1rem;
+  max-width: 99%;
+  margin: 10px 2px;
+  font-weight: bold;
+}
+  
+
+
+.grid-item:hover {
+  background-color: #e0e0e0;
+}
+
+.grid-item.selected {
+  background-color: #5b594e;
+  color:white;
+}
+
+.solved-groups {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.solved-group {
+
+  width: 80%;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 2px 0;
+  text-align: center;
+  font-weight: bold;
+  height:25%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+
+.solved-group h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.solved-group p {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: black;
+}
+
+/* Colors for specific groups */
+.solved-group.yellow {
+  background-color: #fbdb6c;
+  color: #000; /* Dark text for better contrast */
+}
+
+.solved-group.green {
+  background-color: #a0c35a;
+  color: #000; /* Dark text for better contrast */
+
+}
+
+.solved-group.blue {
+  background-color: #b4c3f2;
+  color: #000; /* Dark text for better contrast */
+
+}
+
+.solved-group.purple {
+  background-color: #bb83c3;
+  color: #000; /* Dark text for better contrast */
+
+}
+
+.actions {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border:1px black;
+}
+
+.actions button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 50px;
+  color: black;
+  transition: background-color 0.3s;
+  background-color: white;
+}
+
+
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translatex(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.solvedBounce {
+  animation-fill-mode: both;
+  animation: bounce ease-in 0.3s 1;
+}
+
+.mistakeShake {
+  animation: shake ease-in 0.2s 1.5;
+}

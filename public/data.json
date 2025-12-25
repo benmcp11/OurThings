@@ -1,0 +1,18 @@
+{"1":
+    {"wordle": "HOWDY",
+    "connections": 
+        {
+        "yellow": {"words":["", "","",""], "name": "STAGES OF PREGNANCY"},
+        "green":{"words":["", "","",""], "name": "COUNTRY ESSENTIALS"} ,
+        "blue": {"words":["", "","",""], "name": "FIRST WORD OF LUKE COMBS' SONGS"},
+        "purple":{"words":["", "","",""], "name": "NICKNAMES WITHOUT THE LAST LETTER"}
+        },
+    "strands":{"words": ["", "","",""], 
+                "grid":[["", "","","","", ""],["", "","","","", ""],["", "","","","", ""]],
+                "spangram": "word",
+                "theme":""}
+
+
+    }
+
+}

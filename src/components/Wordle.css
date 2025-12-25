@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #121213; */
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color:black;
+  }
+  
+  .App {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #538d4e; /* Green for success */
+  }
+  
+  .message:has(.fail) {
+    color: #b00020; /* Red for failure */
+  }
+  
