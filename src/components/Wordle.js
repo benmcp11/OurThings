@@ -39,6 +39,9 @@ function App() {
     }
   };
 
+  const memoized = useCallback(() => {
+      checkWord();
+    }, [checkWord]);
 
   const handleKeyPress = useCallback(
     (key) => {

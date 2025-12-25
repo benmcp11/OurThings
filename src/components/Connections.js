@@ -225,7 +225,8 @@ const Connections = () => {
     { name: "New Year's Day", group: ["DINNER", "STEAK PIE", "SOUP", "HUNGOVER"], color: "purple" },
   ];
 
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => { /* ... */ }, []);
   useEffect(() => {
     // Flatten categories into items with default status
     const transformedItems = categories.flatMap(category => 
