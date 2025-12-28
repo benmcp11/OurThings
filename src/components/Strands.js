@@ -487,7 +487,7 @@ const Strands = () => {
           setMessage(`${word}`);
 
           
-        }else if (word.length < 3) {
+        }else if (word.length < 4) {
           console.log(word)
           setMessage("Too Short");
         }else if(normalWords.includes(word)){
@@ -512,7 +512,7 @@ const Strands = () => {
         
         setSelectedPath([]);
       } else {
-        setSelectedPath(selectedPath.slice(0, clickedIndex));
+        setSelectedPath(selectedPath.slice(0, clickedIndex+1));
       }
 
       

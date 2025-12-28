@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   margin: 5px 0;
+  
 }
 
 .key {
@@ -26,16 +27,21 @@
 }
 
 .key.special {
-  width: auto;
+  width: 50px;
   padding: 10px 20px;
 }
 
 .key.enter {
-  width: 80px; /* Wider for clarity */
+  width: 50px; /* Wider for clarity */
+  display: flex;
+  /* flex: 0.3; */
+  justify-content: center;
 }
 
 .key.backspace {
-  width: 80px; /* Wider for clarity */
+  width: 50px; /* Wider for clarity */
+  justify-content: center;
+  
 }
 
 .key.correct {
@@ -68,20 +74,9 @@
 
 .key.enter, .key.backspace{
   font-size: 1rem;
-  width: 40px;
+  width: 50px;
  
   justify-content: center;
   align-items: center;
 
 }
-
-.key.enter{
-  display: flex;
-  flex: 0.3;
-
-}
-
-.key.backspace{
-  flex: 0.3;
-}
-
