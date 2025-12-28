@@ -306,7 +306,6 @@ const Connections = () => {
         if (count ===3){
           setHeaderMessage("One Away!");
         }
-
         
         });
 
