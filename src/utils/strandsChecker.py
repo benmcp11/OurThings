@@ -28,7 +28,8 @@ def find_word_paths(grid, word):
         for j in range(cols):
             if grid[i][j] == word[0]:
                 paths.extend(dfs(grid, word, 1, i, j, [(i, j)], directions, rows, cols))
-    
+    return paths
+
 def check_unique_paths(grid, words):
     all_word_paths = {}
     duplicate = {}
@@ -38,9 +39,12 @@ def check_unique_paths(grid, words):
         paths = find_word_paths(grid, word)
         unique = True
         print(word)
-        for i,path in enumerate(paths):
-            if len(path)!= len(word):
-                paths.remove(i)
+
+        if paths == []:
+            duplicate[word] = []
+            continue
+
+        paths = [path for path in paths if len(set(path)) == len(word)]
 
         # Check if the paths are unique by converting them into sets of tuples
         unique_paths = set(tuple(path) for path in paths)
@@ -66,10 +70,10 @@ grid = [
     ["T", "A", "U", "L", "E", "M"],
     ["T", "L", "N", "K", "T", "O"],
     ["O", "N", "O", "Y", "H", "D"],
-    ["S", "I", "W", "T", "E", "H"],
+    ["I", "S", "W", "T", "E", "H"],
     ["T", "P", "I", "S", "R", "C"],
     ["E", "A", "S", "I", "Y", "A"],
-    ["S", "M", "T", "P", "P", "H"]
+    ["S", "M", "T", "P", "P", "H"],
 ]
 words = ["MERRY", "LAST", "HAPPY", "STEPINTO", "DOTHEYKNOWITS", "BLUE", "CHRISTMAS"]
 
@@ -80,15 +84,22 @@ if valid:
     # print("All words have unique paths:", word_paths)
     print(1)
 else:
-    print("Conflict")
+    print("*"*20)
+    print("CONFLICT")
     
     for word in word_paths.keys():
+        print("-"*20)
         print(word)
+
+        if word_paths[word] == []:
+            print("NO PATH FOUND")
+            continue
         
         for path in word_paths[word]:
             print("-"*20)
 
             lines = grid.copy()
+
 
             for i in range(len(lines)):
                 for j in range(len(lines[i])):
@@ -99,6 +110,8 @@ else:
                 # for line in lines:
                 #     print(line)
                 print(f"{word[l]} ->\t{coords}" )
+
+
             for line in lines:
                 print(line)
         

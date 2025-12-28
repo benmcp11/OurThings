@@ -30,6 +30,8 @@ const Connections = () => {
   const [solvedGroups, setSolvedGroups] = useState([]);
   const [mistakes, setMistakes] = useState(4);
   const [message, setMessage] = useState("");
+  const [headermessage, setHeaderMessage] = useState("Create four groups of four!");
+
 
   const refs = useRef([]);
 
@@ -251,6 +253,7 @@ const Connections = () => {
   };
 
   const handleSubmit = () => {
+    setMessage("");
     if (selectedItems.length === 4) {
       const foundCategory = categories.find((category) =>
         category.group.every((item) => selectedItems.includes(item))
@@ -294,6 +297,22 @@ const Connections = () => {
         }, 300); // 300ms matches the bounce animation duration
       } else {
         // Incorrect guess: Apply shake animation to selected cards
+
+        const hasCategoryWithExactlyThree = categories.some((category) => {
+        const count = category.group.filter((item) =>
+          selectedItems.includes(item)
+        ).length;
+
+        if (count ===3){
+          setHeaderMessage("One Away!");
+        }
+
+        
+        });
+
+        
+
+
         setItems((prevItems) =>
           prevItems.map((item) =>
             selectedItems.includes(item.text)
@@ -381,7 +400,7 @@ const Connections = () => {
   return (
     <div className="connections">
       <h1>Connections</h1>
-      <p>Create four groups of four!</p>
+      {headermessage && <p className="headermessage">{headermessage}</p>}
 
       <div className="solved-groups">
         {solvedGroups.map((group, index) => (

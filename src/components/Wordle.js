@@ -39,10 +39,6 @@ function App() {
     }
   };
 
-  const memoized = useCallback(() => {
-      checkWord();
-    }, [checkWord]);
-
   const handleKeyPress = useCallback(
     (key) => {
       if (isGameOver) return; // Stop further input if the game is over
