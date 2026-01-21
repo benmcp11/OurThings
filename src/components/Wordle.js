@@ -9,7 +9,7 @@ function App() {
   
   // var w = await ReadData("wordle");
   // console.log(w);
-  const [solution] = useState("GRAVY"); // Word to guess
+  const [solution] = useState("DOVER"); // Word to guess
 
 
   const [currentGuess, setCurrentGuess] = useState("");

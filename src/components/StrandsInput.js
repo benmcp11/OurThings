@@ -1,6 +1,8 @@
 import React, { useState, useMemo, useEffect } from "react";
 import "./StrandsInput.css";
 import { findWordPath } from "../utils/strandsUtils";
+import { postStrands } from "../api/strands";
+
 
 const ROWS = 8;
 const COLS = 6;
@@ -19,6 +21,8 @@ export default function StrandsInput() {
   const [theme, setTheme] = useState("Enter Theme");
   const [author, setAuthor] = useState("Anonymous");
   const [manualMode, setManualMode] = useState(false);
+  const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
+
 
   const flatCount = useMemo(
     () => grid.flat().filter((c) => c && c !== ".").length,
@@ -73,16 +77,44 @@ export default function StrandsInput() {
     setWords((w) => w.map((x, idx) => (idx === i ? v.toUpperCase() : x)));
   const deleteWord = (i) => setWords((w) => w.filter((_, idx) => idx !== i));
 
-  const handleGenerate = () => {
-    // placeholder: you can wire this to your generator backend
-    console.log("Generate:", { grid, spangram, words, theme, author });
-    alert("Generate pressed — implement generator hook.");
-  };
+const handleGenerate = async () => {
+  try {
+    const payload = {
+      date,
+      theme,
+      spangram: spangram.toUpperCase(),
+      grid,
+      theme_words: words.map(w => w.toUpperCase()).filter(Boolean),
+      author,
+    };
+
+
+    console.log("Posting Strands:", payload);
+
+    await postStrands(payload);
+
+    alert("Strands puzzle saved successfully!");
+  } catch (err) {
+    console.error("Failed to save strands:", err);
+    alert("Error saving puzzle. Check console for details.");
+  }
+};
+
 
   return (
     <div className="strands-input-container">
       <div className="left-col">
         <form id="generate" onSubmit={(e) => e.preventDefault()}>
+          <div className="form-row">
+            <label htmlFor="date"><strong>Date:</strong></label>
+            <input
+              id="date"
+              type="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              className="text-input"
+            />
+          </div>
           <div className="form-row">
             <label htmlFor="spangram"><strong>Spangram (min 6 letters):</strong></label>
             <input
@@ -98,6 +130,9 @@ export default function StrandsInput() {
             <label>Words:</label>
             <button type="button" className="btn" onClick={addWord}>Add a word</button>
           </div>
+
+          
+
 
           <div id="text-container">
             {words.map((w, i) => {

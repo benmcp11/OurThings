@@ -65,17 +65,8 @@ def check_unique_paths(grid, words):
     
 
 # Example Usage
-grid = [
-    ["S", "E", "B", "Y", "R", "R"],
-    ["T", "A", "U", "L", "E", "M"],
-    ["T", "L", "N", "K", "T", "O"],
-    ["O", "N", "O", "Y", "H", "D"],
-    ["I", "S", "W", "T", "E", "H"],
-    ["T", "P", "I", "S", "R", "C"],
-    ["E", "A", "S", "I", "Y", "A"],
-    ["S", "M", "T", "P", "P", "H"],
-]
-words = ["MERRY", "LAST", "HAPPY", "STEPINTO", "DOTHEYKNOWITS", "BLUE", "CHRISTMAS"]
+grid = [["I", "T", "S", "M", "O", "N"], ["E", "K", "A", "Y", "Y", "E"], ["R", "P", "C", "O", "W", "T"], ["S", "E", "S", "U", "N", "E"], ["T", "E", "R", "C", "O", "T"], ["N", "B", "R", "A", "W", "Y"], ["I", "S", "A", "S", "E", "T"], ["R", "T", "H", "D", "A", "Y"]]
+words = ["CAKE", "PRESENTS", "CAESARS", "TWENTYTWO", "MONEY", "ITSYOURBIRTHDAY"]
 
 # words = ["STEPINTO"]
 

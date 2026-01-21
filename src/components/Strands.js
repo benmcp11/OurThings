@@ -387,22 +387,30 @@ const Strands = () => {
   // const theme = "Best one yet"
 
 
-  var [grid] = useState([
-    ["S", "E", "B", "Y", "R", "R"],
-    ["T", "A", "U", "L", "E", "M"],
-    ["T", "L", "N", "K", "T", "O"],
-    ["O", "N", "O", "Y", "H", "D"],
-    ["I", "S", "W", "T", "E", "H"],
-    ["T", "P", "I", "S", "R", "C"],
-    ["E", "A", "S", "I", "Y", "A"],
-    ["S", "M", "T", "P", "P", "H"],
-  ]);
+  // var [grid] = useState([
+  //   ["S", "E", "B", "Y", "R", "R"],
+  //   ["T", "A", "U", "L", "E", "M"],
+  //   ["T", "L", "N", "K", "T", "O"],
+  //   ["O", "N", "O", "Y", "H", "D"],
+  //   ["I", "S", "W", "T", "E", "H"],
+  //   ["T", "P", "I", "S", "R", "C"],
+  //   ["E", "A", "S", "I", "Y", "A"],
+  //   ["S", "M", "T", "P", "P", "H"],
+  // ]);
 
-  const themeWords = ["MERRY", "LAST", "HAPPY", "STEPINTO", "DOTHEYKNOWITS", "BLUE"];
-  const spangram = "CHRISTMAS";
-  const theme = "The Most Wonderful Time of the Year";
+  // const themeWords = ["MERRY", "LAST", "HAPPY", "STEPINTO", "DOTHEYKNOWITS", "BLUE"];
+  // const spangram = "CHRISTMAS";
+  // const theme = "The Most Wonderful Time of the Year";
 
+  var [grid] = useState([["I", "T", "S", "M", "O", "N"], ["E", "K", "A", "Y", "Y", "E"], ["R", "P", "C", "O", "W", "T"], ["S", "E", "S", "U", "N", "E"], ["T", "E", "R", "C", "O", "T"], ["N", "B", "R", "A", "W", "Y"], ["I", "S", "A", "S", "E", "T"], ["R", "T", "H", "D", "A", "Y"]]);
 
+  const themeWords = ["CAKE", "PRESENTS", "CAESARS", "TWENTYTWO", "MONEY"]
+  const spangram = "ITSYOURBIRTHDAY";
+  const theme = "This is the day!";
+
+  
+
+  
 
 
   const [selectedPath, setSelectedPath] = useState([]);

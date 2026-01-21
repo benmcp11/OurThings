@@ -1,8 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import { useEffect, useState } from "react";
+
 
 const Home = () => {
+
+  // const [message, setMessage] = useState("");
+
+  // useEffect(() => {
+  //   fetch("http://localhost:8000/api/hello/")
+  //     .then(res => res.json())
+  //     .then(data => setMessage(data.message));
+  // }, []);
+
+
   return (
     <div className="home">
       <h1>Our Things</h1>

@@ -220,11 +220,18 @@ const Connections = () => {
   //   { name: "2024", group: ["BEN'S GRAD", "EUROS", "LONDON SUMMER", "FIRST LANZA"], color: "purple" },
   // ];
 
-    const categories = [
-    { name: "Christmas Day", group: ["PRESENTS ", "TURKEY", "CRACKERS", "WORK"], color: "yellow" },
-    { name: "Boxing Day", group: ["PARTY", "SING-A-LONG", "FAMILY", "LEFTOVERS"], color: "green" },
-    { name: "Hogmanay", group: ["BELLS", "MIDNIGHT", "COCKTAILS", "AULD LANG SYNE"], color: "blue" },
-    { name: "New Year's Day", group: ["DINNER", "STEAK PIE", "SOUP", "HUNGOVER"], color: "purple" },
+  //   const categories = [
+  //   { name: "Christmas Day", group: ["PRESENTS ", "TURKEY", "CRACKERS", "WORK"], color: "yellow" },
+  //   { name: "Boxing Day", group: ["PARTY", "SING-A-LONG", "FAMILY", "LEFTOVERS"], color: "green" },
+  //   { name: "Hogmanay", group: ["BELLS", "MIDNIGHT", "COCKTAILS", "AULD LANG SYNE"], color: "blue" },
+  //   { name: "New Year's Day", group: ["DINNER", "STEAK PIE", "SOUP", "HUNGOVER"], color: "purple" },
+  // ];
+
+      const categories = [
+    { name: "Your Hair Colours", group: ["BLONDE", "GINGER", "BLACK", "PINK"], color: "yellow" },
+    { name: "Names with a letter changed", group: ["CURLY", "PEN", "HARDY", "GRIN"], color: "green" },
+    { name: "22", group: ["PLAYERS ON PITCH", "COLOURED PROPERTIES IN MONOPOLY", "CATCH", "I'M FEELING"], color: "purple" },
+    { name: "Came out in 2004", group: ["INCREDIBLES", "SHREK 2", "FACEBOOK", "HEY YA!"], color: "blue" },
   ];
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -373,7 +380,7 @@ const Connections = () => {
 
   const adjustFontSize = (element) => {
     const maxFontSize = 0.9; // Maximum font size in rem
-    const minFontSize = 0.4; // Minimum font size in rem
+    const minFontSize = 0.2; // Minimum font size in rem
     const step = 0.01; // Font size reduction step
 
     let fontSize = maxFontSize;
